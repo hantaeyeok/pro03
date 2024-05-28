@@ -1,0 +1,12 @@
+package com.company.dao;
+
+public interface FileBoard {
+	public List<FileBoard>
+}
+//private int no;
+//private String title;
+//private String content;
+//private String url;
+//private int hits;
+//private String resdate;
+//private String author;

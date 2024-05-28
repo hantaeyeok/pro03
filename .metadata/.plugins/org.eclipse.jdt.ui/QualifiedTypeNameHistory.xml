@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="lombok.Data"/>
+    <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
+    <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="com.company.dao.BoardDAO"/>
+    <fullyQualifiedTypeName name="com.company.service.MemberService"/>
+    <fullyQualifiedTypeName name="com.company.service.FileBoardService"/>
+    <fullyQualifiedTypeName name="com.company.dao.FileBoardDAO"/>
+    <fullyQualifiedTypeName name="com.company.service.SalesService"/>
+    <fullyQualifiedTypeName name="com.company.service.InventoryService"/>
+    <fullyQualifiedTypeName name="com.company.dao.InventoryDAO"/>
+    <fullyQualifiedTypeName name="com.company.dao.ProductDAO"/>
+    <fullyQualifiedTypeName name="com.company.dao.SalesDAO"/>
+    <fullyQualifiedTypeName name="com.azul.crs.client.Inventory"/>
+    <fullyQualifiedTypeName name="com.company.dto.Inventory"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+    <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.company.service.BoardService"/>
+    <fullyQualifiedTypeName name="com.company.dto.Member"/>
+    <fullyQualifiedTypeName name="com.company.service.ProductService"/>
+    <fullyQualifiedTypeName name="com.company.dto.Product"/>
+    <fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
+    <fullyQualifiedTypeName name="org.hibernate.transform.AliasToEntityMapResultTransformer"/>
+    <fullyQualifiedTypeName name="java.text.ParseException"/>
+    <fullyQualifiedTypeName name="org.springframework.web.servlet.mvc.support.RedirectAttributes"/>
+    <fullyQualifiedTypeName name="com.company.dao.FreeDAO"/>
+    <fullyQualifiedTypeName name="com.company.service.FreeService"/>
+    <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+    <fullyQualifiedTypeName name="org.springframework.web.multipart.MultipartHttpServletRequest"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+</qualifiedTypeNameHistroy>

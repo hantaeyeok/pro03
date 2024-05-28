@@ -1,0 +1,13 @@
+package com.company.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.company.dao.FreeDAO;
+
+@Service
+public class FreeServiceImpl implements FreeService{
+
+		@Autowired
+		private FreeDAO freeDAO;
+}

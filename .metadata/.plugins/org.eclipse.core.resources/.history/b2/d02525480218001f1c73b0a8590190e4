@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+"-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="member">
+<select id="getMemberList" resultType="com.spring.dto.Member">
+        SELECT id, pw, name, birth, gender, postcode, addr FROM member
+    </select>
+
+    <select id="getMember" parameterType="string" resultType="com.spring.dto.Member">
+        SELECT id, pw, name, birth, gender, postcode, addr FROM member WHERE id = #{id}
+    </select>
+
+    <select id="maxNum" resultType="int">
+        SELECT MAX(num) FROM member
+    </select>
+
+    <insert id="insMember" parameterType="com.spring.dto.Member">
+        INSERT INTO member (id, pw, name, birth, gender, postcode, addr)
+        VALUES (#{id}, #{pw}, #{name}, #{birth}, #{gender}, #{postcode}, #{addr})
+    </insert>
+
+    <update id="changePw" parameterType="com.spring.dto.Member">
+        UPDATE member SET pw = #{pw} WHERE id = #{id}
+    </update>
+
+    <update id="changeInfo" parameterType="com.spring.dto.Member">
+        UPDATE member SET name = #{name}, birth = #{birth}, gender = #{gender}, postcode = #{postcode}, addr = #{addr} WHERE id = #{id}
+    </update>
+
+    <delete id="delMember" parameterType="string">
+        DELETE FROM member WHERE id = #{id}
+    </delete>
+
+    <select id="loginCheck" parameterType="com.spring.dto.Member" resultType="String">
+        SELECT id FROM member WHERE id = #{id}
+    </select>
+
+    <select id="idCheck" parameterType="String" resultType="int">
+        SELECT COUNT(*) FROM member WHERE id = #{id}
+    </select>
+</mapper>
+<!-- 해당 요소의 id는 중복되어서도 안되며, 메소드 이름을 의미합니다. -->
