@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { margin: 0; padding: 0; }
+        body { width:100%; overflow-x:hidden; }
+        .clr-fix { clear:both; }
+        .clr-fix:after { content:""; display:block; width:100%; clear:both;}
+        * { margin: 0; padding: 0; }
+        a { text-decoration: none;}
+        .wrap { position:relative; }
+        ul {list-style: none;}
+    </style>
+    <style>
+        .product-list{width: 1800px; height: auto; margin: 0 auto; border: 1px solid #e1e1e1;}
+        .product-card {
+            width: 200px;
+            height: 200px;
+            float: left;
+            margin-left : 50px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border: 1px solid #e1e1e1;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .product-card img {
+            max-width: 150px;
+            margin-right: 20px;
+        }
+        .product-info {
+        
+        }
+        .section {}
+    </style>
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">제품 목록</h1>
+            <a href="${path}/product/productRegister.do" class="button is-primary">제품 등록</a>
+            <div class="product-list">
+
+                <c:forEach var="product" items="${productList}">
+                    <div class="product-card">
+                        <div class="product-image">
+                           <a href="${path}/product/getProduct.do?pno=${product.pno}"><img src="${path}/resources/upload/${product.img}" alt="${product.pname}"></a> 
+                        </div>
+                        <div class="product-info">
+                            <h2 class="title ">${product.pname}</h2>
+                            <p class="subtitle ">${product.cate}</p>
+                            <p class=""><fmt:formatNumber value="${product.price}" type="currency"/></p>
+                            <p>${product.com}</p>
+                        </div>
+                    </div>
+                </c:forEach>
+
+                <c:forEach var="product" items="${productList}">
+                    <div class="product-card">
+                        <div class="product-image">
+                           <a href="${path}/product/getProduct.do?pno=${product.pno}"><img src="${path}/resources/upload/${product.img}" alt="${product.pname}"></a> 
+                        </div>
+                        <div class="product-info">
+                            <h2 class="title ">${product.pname}</h2>
+                            <p class="subtitle ">${product.cate}</p>
+                            <p class=""><fmt:formatNumber value="${product.price}" type="currency"/></p>
+                            <p>${product.com}</p>
+                        </div>
+                    </div>
+                </c:forEach>
+
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>

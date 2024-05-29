@@ -38,6 +38,16 @@ public class ProductDAOImpl implements ProductDAO{
 	public void delProduct(int pno) {
 		sqlSession.delete("product.delProduct",pno);
 	}
+
+	@Override
+	public int getTotalCount() {
+		return sqlSession.selectOne("product.getTotalCount");
+	}
+
+	@Override
+	public List<Product> getProductCateList(String cate) {
+		return sqlSession.selectList("product.getProductCateList",cate);
+	}
 	
 	
 }

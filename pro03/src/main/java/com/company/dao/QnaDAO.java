@@ -10,6 +10,10 @@ public interface QnaDAO {
 	public void insQna(Qna qna);
 	public void upQna(Qna qna);
 	public void delQna(int no);
+	public int getPlevel(int parno);
+	public List<Qna> getAnswers(int parno);
+	public void delAnswers(int parno);
+	public void vcntCount(int no);
 }
 
 //private int no;

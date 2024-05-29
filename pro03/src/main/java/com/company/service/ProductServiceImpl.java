@@ -38,6 +38,16 @@ public class ProductServiceImpl implements ProductService{
 	public void delProduct(int pno) {
 		productDAO.delProduct(pno);
 	}
+
+	@Override
+	public int getTotalCount() {
+		return productDAO.getTotalCount();
+	}
+
+	@Override
+	public List<Product> getProductCateList(String cate) {
+		return productDAO.getProductCateList(cate);
+	}
 	
 	
 }

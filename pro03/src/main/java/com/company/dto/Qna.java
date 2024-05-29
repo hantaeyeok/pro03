@@ -1,5 +1,7 @@
 package com.company.dto;
 
+import java.util.Date;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,9 +14,9 @@ public class Qna {
 	private String title;
 	private String content;
 	private int hits;
-	private String resdate;
+	private Date resdate;
 	private String id;
 	private String name;
-	private int lev;
+	private int plevel;
 	private int parno;
 }

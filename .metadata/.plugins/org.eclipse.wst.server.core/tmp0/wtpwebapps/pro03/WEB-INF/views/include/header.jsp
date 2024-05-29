@@ -75,21 +75,24 @@
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link" href="#">제품</a>
                     <div class="navbar-dropdown">
-                        <a class="navbar-item" href="${hpath}/products/beer">맥주</a>
-                        <a class="navbar-item" href="${hpath}/products/soju">소주</a>
-                        <a class="navbar-item" href="${hpath}/products/wine">와인</a>
-                        <a class="navbar-item" href="${hpath}/products/others">기타 주류</a>
-                        <a class="navbar-item" href="${hpath}/products/new">신제품</a>
-                        <a class="navbar-item" href="${hpath}/products/register">제품 등록</a>
+                    	<a class="navbar-item" href="${hpath}/product/productList.do">전체상품</a>
+                        <a class="navbar-item" href="${hpath}/product/getProductCateList.do?cate=beer">맥주</a>
+                        <a class="navbar-item" href="${hpath}/product/getProductCateList.do?cate=soju">소주</a>
+                        <a class="navbar-item" href="${hpath}/product/getProductCateList.do?cate=wine">와인</a>
+                        <a class="navbar-item" href="${hpath}/product/getProductCateList.do?cate=others">기타 주류</a>
+                        <a class="navbar-item" href="${hpath}/product/getProductCateList.do?cate=new">신제품</a>
+                      
                     </div>
                 </div>
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link" href="#">고객지원</a>
                     <div class="navbar-dropdown">
-                        <a class="navbar-item" href="${hpath}/notices">공지사항</a>
+                        <a class="navbar-item" href="${hpath}/notice/noticeList.do">공지사항</a>
                         <a class="navbar-item" href="${hpath}/faq">FAQ</a>
-                        <a class="navbar-item" href="${hpath}/qna">QNA</a>
+                        <a class="navbar-item" href="${hpath}/qna/qnaList.do">QNA</a>
                         <a class="navbar-item" href="${hpath}/contact">1:1문의</a>
+                        <a class="navbar-item" href="${hpath}/free/freeList.do">자유계시판</a>
+                        
                     </div>
                 </div>
                 <a class="navbar-item" href="${hpath}/purchase">구매하기</a>

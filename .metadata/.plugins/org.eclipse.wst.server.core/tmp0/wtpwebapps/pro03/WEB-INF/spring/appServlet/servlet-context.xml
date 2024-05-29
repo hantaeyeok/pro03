@@ -27,6 +27,7 @@
 	<resources mapping="/inventory/**" location="/WEB-INF/views/inventory" />
 	<resources mapping="/member/**" location="/WEB-INF/views/member" />
 	<resources mapping="/product/**" location="/WEB-INF/views/product/" />
+	<resources mapping="/product/**" location="/WEB-INF/views/exproduct/" />
 	<resources mapping="/qna/**" location="/WEB-INF/views/qna" />
 	<resources mapping="/sales/**" location="/WEB-INF/views/sales/" />
 	<resources mapping="/reservate/**" location="/WEB-INF/views/reservate" />
