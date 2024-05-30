@@ -34,37 +34,37 @@ public class BoardController {
 			return "board/getBoard";
 		}
 		
-		@GetMapping("insBoard")
-		public String insBoard(Model model) {
-			model.addAttribute("board",new Board());
-			return "board/insBoard";
-		}
-		
-		@PostMapping("insProBoard")
-		public String insProBoard(Board board, Model model) {
-			boardService.insBoard(board);
-			return "redirect:/board/boardList";
-		}
-		
-		@GetMapping("upBoard")
-		public String upBoard(@RequestParam("bno") int bno, Model model) {
-			Board board = boardService.getBoard(bno);
-			model.addAttribute("board",board);
-			return "board/upBoard";
-		}
-		
-		@PostMapping("upProBoard")
-		public String upProBard(Board board, Model model) {
-			boardService.upBoard(board);
-			return "redirect:getBoard.do?bno="+board.getBno();// 수정된 게시물 상세보기로 리다이렉트
-			//사용자에게 url주소로 리다이랙트하라는 의미
-		}
-		
-		 @GetMapping("delBoard.do")
-		    public String delBoard(@RequestParam("bno") int bno) {
-		        boardService.delBoard(bno);
-		        return "redirect:boardList.do";
-		 }
+//		@GetMapping("insBoard")
+//		public String insBoard(Model model) {
+//			model.addAttribute("board",new Board());
+//			return "board/insBoard";
+//		}
+//		
+//		@PostMapping("insProBoard")
+//		public String insProBoard(Board board, Model model) {
+//			boardService.insBoard(board);
+//			return "redirect:/board/boardList";
+//		}
+//		
+//		@GetMapping("upBoard")
+//		public String upBoard(@RequestParam("bno") int bno, Model model) {
+//			Board board = boardService.getBoard(bno);
+//			model.addAttribute("board",board);
+//			return "board/upBoard";
+//		}
+//		
+//		@PostMapping("upProBoard")
+//		public String upProBard(Board board, Model model) {
+//			boardService.upBoard(board);
+//			return "redirect:getBoard.do?bno="+board.getBno();// 수정된 게시물 상세보기로 리다이렉트
+//			//사용자에게 url주소로 리다이랙트하라는 의미
+//		}
+//		
+//		 @GetMapping("delBoard.do")
+//		    public String delBoard(@RequestParam("bno") int bno) {
+//		        boardService.delBoard(bno);
+//		        return "redirect:boardList.do";
+//		 }
 
 
 		

@@ -21,7 +21,7 @@ public class QnaDAOImpl implements QnaDAO{
 
 	@Override
 	public Qna getQna(int no) {
-		return sqlSession.selectOne("qna.getQna");
+		return sqlSession.selectOne("qna.getQna",no);
 	}
 
 //	@Override

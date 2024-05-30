@@ -100,7 +100,7 @@
                     <c:when test="${not empty sessionScope.sid}">
                         <a class="navbar-item" id="memberPageLink" href="${hpath}/member/memberPage.do">마이페이지</a>
                         <c:if test="${sessionScope.sid == 'admin'}">
-                            <a class="navbar-item" id="adminPageLink" href="${hpath}/admin/adminPage.do">관리자페이지</a>
+                            <a class="navbar-item" id="adminPageLink" href="${hpath}/admin/adminHome.do">관리자페이지</a>
                         </c:if>
                     </c:when>
                 </c:choose>

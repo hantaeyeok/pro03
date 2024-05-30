@@ -5,6 +5,8 @@ import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,6 +22,9 @@ import com.company.service.QnaService;
 @RequestMapping("/qna/")
 public class QnaController {
 
+	private static final Logger log = LoggerFactory.getLogger(ProductController.class);
+
+	
 	 @Autowired
 	 private QnaService qnaService;
 	 
@@ -46,7 +51,7 @@ public class QnaController {
 		qna.setName(name);
 		qna.setResdate(new Date());
 		qnaService.insQna(qna);
-		return "qna/qnaList";
+		return "redirect:qnaList.do";
     }
     
     @GetMapping("getQna.do")
@@ -54,8 +59,10 @@ public class QnaController {
         Qna qna = qnaService.getQna(no);
         String sid = (String) session.getAttribute("sid");
         List<Qna> answerList = qnaService.getAnswers(no); // 답변 리스트 가져오기
+        log.info("Qna : {}", qna);
         model.addAttribute("qna", qna);
         model.addAttribute("answerList", answerList); // 답변 리스트 추가
+        model.addAttribute("sid",sid);
         return "qna/getQna";
     }
     
@@ -75,7 +82,7 @@ public class QnaController {
     @GetMapping("delQna.do")
     public String delQna(@RequestParam("no") int no) {
         qnaService.delQna(no);
-        return "redirect:/qna/qnaList.do";
+        return "redirect:qnaList.do";
     }
 
     @GetMapping("insAnswer.do")
@@ -93,4 +100,5 @@ public class QnaController {
         }
         return "redirect:/qna/getQna.do?no=" + qna.getParno();
     }
+    
 }

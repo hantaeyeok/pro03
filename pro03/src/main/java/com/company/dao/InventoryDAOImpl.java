@@ -6,6 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.company.dto.CategoryVO;
 import com.company.dto.Inventory;
 
 @Repository
@@ -13,6 +14,11 @@ public class InventoryDAOImpl implements InventoryDAO{
 	
 	@Autowired
 	private SqlSession sqlSession;
+
+	@Override
+	public int getTotalCount() {
+		return sqlSession.selectOne("inventory.getTotalCount");
+	}
 
 	@Override
 	public List<Inventory> getInventoryList() {
@@ -38,5 +44,11 @@ public class InventoryDAOImpl implements InventoryDAO{
 	public void delInventory(int ino) {
 		sqlSession.delete("inventory.delInventory",ino);
 	}
+
+	@Override
+	public List<CategoryVO> categoryLoading(String cate) {
+		return sqlSession.selectOne("inventory.categoryLoading", cate);
+	}
+	
 	
 }

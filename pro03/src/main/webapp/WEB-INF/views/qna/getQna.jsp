@@ -22,6 +22,7 @@
         
         <h2 class="title is-3">질문답변 상세보기</h2>
         <div class="box">
+            <input type="hidden" name="no" value="${qna.no}" />
             <h3 class="title is-4">제목</h3>
             <div class="content">${qna.title}</div>
             <h3 class="title is-4">작성자</h3>
@@ -84,7 +85,6 @@
                     </form>
                 </div>
             </c:if>
-            
         </div>
     </div>
 <jsp:include page="../include/footer.jsp"></jsp:include>

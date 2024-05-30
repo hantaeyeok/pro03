@@ -20,9 +20,9 @@
 </h1>
 <p> <a href="${path}/board/boardList.do">boardList</a></p>
 <p> <a href="${path}/product/productList.do">productList</a></p>
-<p> <a href="${path}/product/productList.do">productList2</a></p>
-
 <p> <a href="${path}/free/freeList.do">freeList</a></p>
+<p> <a href="${path}/qna/qnaList.do">qnaList</a></p>
+
 <!-- 
 <p> <a href="${path}/exproduct/exproductList.do">exproductList</a></p> -->
 <P>  The time on the server is ${serverTime}. </P>
